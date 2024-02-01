@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/style.css">
+    <title>BMI Result</title>
+</head>
+<body>
+    <h1>BMI RESULT</h1>
+    <style>
+        h1{
+            text-align: center;
+        }
+    </style>
+    <div class="container1">
+        {% if bmi  %}
+        <div class="container2">
+          {% if (bmi < 18.5 ) %}
+            <p>Your BMI is 
+              <div>{{ bmi }}</div>
+            </p>
+            <p>You're UNDERWEIGHT</p>
+            <p class="slide-right">
+              You can put on weight by eating small meals frequently throughout the day.</p>
+            <p class="slide-left">Try to snack on healthy, high-energy foods like cheese, nuts, milk-based smoothies and dried fruit.</p>
+            <p class="slide-right">More tips for gaining weight safely include: using full cream milk in coffee, tea or with meals.</p>
+          {% endif %}
+          {% if (bmi >= 18.5 and bmi < 25 ) %}
+            <p>Your BMI is 
+              <div>{{ bmi }}</div>
+            </p>
+            <p>You're HEALTHY</p>
+            <h1 class="slide-right"> CHEERS....!</h1>
+            <h1 class="slide-left">YOU'RE HEALTHY</h1>
+            <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+            <script src="https://run.confettipage.com/here.js" data-confetticode="U2FsdGVkX18z6Xgdja+FrNPRBapIjx/ay2XkJAObC3WHXC4vHWzr6Gsq5DindEuKVsFekR/0RMEVrYiJ5j1VR3ZG4DXouzBLD2oGZlsRanSqDCjLXysq/U/+QiX7G3Yte58YIK5MolSJNtHWvj0AIfvWnbuYyyT97XuZ0VZ0dYn7bTqveX+akX8uITyHzzwi+YBTe+7PsvGz9clJLpMGmQNabdzDrKEnDE3+9ibyfeB+U3WkmTR5Nhf4P3mTf4x4nOFCO8xDatgLlrM0UsxzBial4N9avlXqSy5smKQ5skNJjq2jAin2xMBca0Jm2MGOwBNymGMTQTKQPxHxJpIzwIfjoGfFs7bKErm1yVpNckOOP//wC+pgGN1EaaTDv/rN+Ekn52qzkjkfm5AcHhn+Uctw5m2ASjuuaVd+8IT0Xqv/pQYFZiHaTZrG7kltwlVkxp/R3o1061PHBlfXIR2nVHjvt682VSdwbLetPKpItHbwrNPWUGDGEn15xQAvP6SguouIFmv7uYzg6XZc4qaEILsyYjygDvQQAsw2leC3brtZvPswsmp0y4vcgU4WHb+ff0rYP8xqHMiEnQGxc2KXzZs5osSolhBVuSLs+ZLDS0K5F/EqvtvakCqVIeLu9O1h"></script>
+            <script>confetti()*100;</script>
+          {% endif %}
+          {% if (bmi >= 25 and bmi < 30 ) %}
+            <p>Your BMI is 
+              <div>{{ bmi }}</div>
+            </p>
+            <p>You're OVER WEIGHT</p>
+            <div>
+              <p class="slide-left">Reduce your intake of foods that are high in added fat, saturated fat, sugar and salt.</p> 
+              <p class="slide-right">Make soft drinks, lollies, snack foods and alcoholic drinks an occasional 'extra'. </p>
+              <p class="slide-left">Most adults should eat no more than one or 2 'treats' a day.</p>
+              <p class="slide-right">If you are overweight or inactive, you may need to limit treats to less than one a day.</p>
+            </div>
+          {% endif %}
+          {% if (bmi >= 30) %}
+            <p>Your BMI is 
+              <div>{{ bmi }}</div>
+            </p>
+            <p>You're OBESE</p>
+            <div>
+                <p class="slide-left">The best way to treat obesity is to eat a healthy, reduced-calorie diet and exercise regularly.</p> 
+                <p class="slide-right">To do this you should: eat a balanced, calorie-controlled diet .. </p>
+                <p class="slide-left">Improving eating habits and increasing physical activity play a vital role in preventing obesity.</p>
+                <p class="slide-right">Choosing healthier foods (whole grains, fruits and vegetables, healthy fats and protein sources) and beverages.</p>
+            </div>
+          {% endif %}
+        </div>
+        {% endif %}
+      </div>
+      </div>
+      <div class="calculateagain">
+        <button><a href="/">Calculate Again</a></button>
+      </div>
+</body>
+</html>

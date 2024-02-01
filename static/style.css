@@ -1,0 +1,88 @@
+/* *{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+} */
+.buttonclass{
+    color: white;
+    background-color: #007BFF;
+    border-radius: 25px;
+    font-size: 16px;
+    padding: 10px 10px;
+    border: 2px solid ;
+}
+.buttonclass:hover{
+    cursor:pointer;
+    background-color: blue;
+    transform: translateY(-5px);
+    transition: 0.3s;
+}
+.formpo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container1{
+    text-align: center;
+}
+.buttonpo{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.container1{
+    overflow: hidden;
+    font-size: 24px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: bold;
+}
+
+ /* Animation  */
+ .slide-right {
+    overflow: hidden;
+    animation: 1s slide-right;
+  }
+  @keyframes slide-right {
+    from {
+      margin-left: -100%;
+    }
+    to {
+      margin-left: 0%;
+    }
+  }
+  .slide-left {
+    overflow: hidden;
+    animation: 1s slide-left;
+  }
+  @keyframes slide-left {
+    from {
+      margin-left: 100%;
+    }
+    to {
+      margin-left: 0%;
+    }
+  }
+.calculateagain{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.calculateagain button{
+    margin-top: 15px;
+    background-color: #007BFF;
+    padding: 10px 10px;
+    border-radius: 20px;
+    border: none;
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-family:Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+}
+.calculateagain button:hover{
+    background-color: blue;
+    transform: translateY(-6px);
+    transition: 0.3s;
+    cursor: pointer;
+}
